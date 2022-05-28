@@ -23,6 +23,9 @@ jobs:
           d=`date '+%Y-%m-%dT%H:%M:%SZ'`
           echo $d > LAST_UPDATED
           
+      - name: Config Safe Directory
+        run: git config --global --add safe.directory /github/workspace
+          
       - name: Commit changes
         run: |
           git config --local user.email "ibuu2021@gmail.com"
